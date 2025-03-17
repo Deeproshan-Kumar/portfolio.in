@@ -1,0 +1,51 @@
+.introduction {
+    text-align: center;
+    margin-bottom: 4rem;
+
+    p {
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 1.7;
+
+        strong {
+            color: var(--white);
+        }
+    }
+}
+
+.timeline-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .panel {
+        position: relative;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 0 2rem;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            height: 100%;
+            width: 0.1rem;
+            background: var(--primary);
+        }
+    }
+}
+
+// Responsive
+@media only screen and (max-width: 767px) {
+    .timeline-wrapper {
+        gap: 2rem;
+
+        .panel {
+            width: 100%;
+            padding-right: 0;
+            gap: 1rem;
+        }
+    }
+}

@@ -1,0 +1,120 @@
+.services-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 -1rem;
+
+  .service {
+    width: 33.33%;
+    padding: 1rem;
+
+    .icon-box {
+      position: relative;
+      background: linear-gradient(90deg, var(--clr), transparent, transparent);
+      border-radius: 0.4rem;
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0.1rem;
+        background: var(--glass);
+        border-radius: 0.4rem;
+        z-index: 1;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        height: 90%;
+        width: 0.4rem;
+        transform: translateY(-50%);
+        background: var(--clr);
+        border-radius: 0.4rem;
+        z-index: 1;
+      }
+
+      .box {
+        position: relative;
+        padding: 2.5rem;
+        z-index: 2;
+
+        &::before {
+          content: attr(data-index);
+          position: absolute;
+          top: 2.5rem;
+          right: 2.5rem;
+          font-size: 5.6rem;
+          font-weight: 700;
+          color: var(--clr);
+        }
+
+        .icon {
+          height: 7rem;
+          width: 7rem;
+          background: var(--black);
+          border-radius: 50%;
+          display: grid;
+          place-items: center;
+          color: var(--white);
+          font-size: 2.6rem;
+          margin-bottom: 1rem;
+        }
+
+        h4 {
+          font-size: 2rem;
+          color: var(--white);
+        }
+      }
+    }
+  }
+}
+
+// Responsive
+@media only screen and (max-width: 991px) {
+  .services-wrapper {
+    .service {
+      .icon-box {
+        .box {
+          padding: 2rem;
+
+          &::before {
+            font-size: 4.2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .services-wrapper {
+    .service {
+      padding: 0.5rem;
+      width: 50%;
+
+      .icon-box {
+        .box {
+          .icon {
+            height: 5rem;
+            width: 5rem;
+            font-size: 2.4rem;
+          }
+
+          h4 {
+            font-size: 1.8rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .services-wrapper {
+    .service {
+      width: 100%;
+    }
+  }
+}

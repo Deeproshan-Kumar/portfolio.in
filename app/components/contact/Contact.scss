@@ -1,0 +1,225 @@
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+
+  .panel {
+    min-height: 40rem;
+    width: 50%;
+
+    &.panel-left {
+      border-radius: 0.4rem;
+    }
+
+    &.panel-right {
+      padding: 0 2rem;
+
+      .fields {
+        display: flex;
+        flex-wrap: nowrap;
+
+        .w-50 {
+          width: 50%;
+          padding: 1rem;
+        }
+
+        .field {
+          position: relative;
+          width: 100%;
+          margin-bottom: 2rem;
+
+          input,
+          textarea {
+            background: transparent;
+            height: 7rem;
+            width: 100%;
+            border: 0;
+            outline: 0;
+            color: var(--white);
+            font-size: 1.5rem;
+            font-family: var(--font-geist-sans), sans-serif;
+            border-bottom: 0.1rem solid var(--glass);
+          }
+
+          textarea {
+            resize: vertical;
+          }
+
+          label {
+            position: absolute;
+            top: 2rem;
+            left: 0;
+            font-size: 1.5rem;
+            font-weight: 500;
+            pointer-events: none;
+            transition: 300ms all ease-in-out;
+          }
+
+          input:focus + label,
+          textarea:focus + label,
+          input:valid + label,
+          textarea:valid + label {
+            top: 0;
+            color: var(--primary);
+          }
+
+          .animation {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            transform: scaleX(0);
+            transform-origin: left;
+            border-bottom: 0.1rem solid var(--primary);
+            transition: 300ms all ease-in-out;
+          }
+
+          input:focus ~ .animation,
+          textarea:focus ~ .animation {
+            transform: scaleX(100%);
+          }
+
+          input::placeholder,
+          textarea::placeholder {
+            font-size: 1.5rem;
+            font-weight: 500;
+            font-family: var(--font-geist-sans), sans-serif;
+          }
+        }
+
+        &.w-full {
+          padding: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.contact-details-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 -1rem;
+
+  .panel {
+    width: calc(100% / 3);
+    padding: 1rem;
+
+    article {
+      position: relative;
+      min-height: 17rem;
+      padding: 2rem;
+      background: linear-gradient(to right, var(--clr), transparent);
+      border-radius: 0.4rem;
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0.1rem;
+        border-radius: 0.4rem;
+        background: var(--glass);
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        height: 90%;
+        width: 0.4rem;
+        background: var(--clr);
+      }
+
+      .group {
+        position: relative;
+        z-index: 2;
+
+        h2 {
+          color: var(--white);
+          font-size: 2.2rem;
+          font-weight: 600;
+          margin-bottom: 1rem;
+        }
+
+        .icon-box {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+
+          .icon {
+            height: 3.6rem;
+            width: 3.6rem;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            background: var(--clr);
+            display: grid;
+            place-items: center;
+            font-size: 1.6rem;
+            color: var(--white);
+          }
+
+          &:not(:last-child) {
+            margin-bottom: 1rem;
+          }
+        }
+
+        p {
+          font-weight: 500;
+          line-height: 1.6;
+
+          a {
+            color: var(--text);
+            transition: 300ms all ease-in-out;
+
+            &:hover {
+              color: var(--white);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Responsive
+@media only screen and (max-width: 767px) {
+  .contact-wrapper {
+    .panel {
+      width: 100%;
+
+      &.panel-right {
+        padding: 0;
+      }
+    }
+  }
+
+  .contact-details-wrapper {
+    .panel {
+      width: 50%;
+      padding: 0.5rem;
+
+      article {
+        .group {
+          h2 {
+            font-size: 2rem;
+          }
+
+          .icon-box {
+            .icon {
+              font-size: 1.4rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .contact-details-wrapper {
+    .panel {
+      width: 100%;
+    }
+  }
+}

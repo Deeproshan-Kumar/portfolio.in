@@ -1,0 +1,14 @@
+.projects {
+  .projects-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 -1rem;
+    margin-bottom: 4rem;
+  }
+
+  .view-more {
+    display: flex;
+    justify-content: center;
+  }
+}

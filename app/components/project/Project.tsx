@@ -1,10 +1,10 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Button from "../button/Button";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import "./Project.scss";
 
 export interface ProjectProps {
-  thumbnail: any;
+  thumbnail: string | StaticImageData;
   name: string;
   tags: string[];
   description: string;
@@ -29,11 +29,13 @@ export default function Project({
         <div className="project-body">
           <h4>
             {name}
-            {isLive ? <span className="status live">Live</span> : <span className="status personal">Personal</span>}
+            {isLive ? (
+              <span className="status live">Live</span>
+            ) : (
+              <span className="status personal">Personal</span>
+            )}
           </h4>
-          <p className="tags">
-          {tags}
-          </p>
+          <p className="tags">{tags}</p>
           <p>{description}</p>
           <Button
             text="Project Url"

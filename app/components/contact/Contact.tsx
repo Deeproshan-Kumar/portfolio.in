@@ -2,9 +2,9 @@
 
 import Button from "../button/Button";
 import SectionIntro from "../section-intro/SectionIntro";
-import "./Contact.scss";
 import { IoMdSend } from "react-icons/io";
 import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
+import "./Contact.scss";
 
 export default function Contact() {
   const handleSubmit = () => {};
@@ -126,7 +126,7 @@ export default function Contact() {
           <div className="panel right">
             <article style={{ "--clr": "var(--blue)" } as React.CSSProperties}>
               <div className="group">
-                <h2>Let's Connect</h2>
+                <h2>Let&apos;s Connect</h2>
                 <div className="icon-box">
                   <div className="icon">
                     <FaEnvelope />

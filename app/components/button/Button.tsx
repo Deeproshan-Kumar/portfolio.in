@@ -1,10 +1,11 @@
 import Link from "next/link";
+import { ReactNode } from "react";
 import "./Button.scss";
 
 interface ButtonProps {
   text?: string;
-  link?: any;
-  icon?: React.ReactNode;
+  link?: string | { pathname: string; query?: { [key: string]: string | string[] } };
+  icon?: ReactNode;
   isExternal?: boolean;
   isButton: boolean;
   className?: string;
@@ -31,7 +32,7 @@ export default function Button(props: ButtonProps) {
     </button>
   ) : (
     <Link
-      href={link}
+      href={link!}
       target={isExternal ? "_blank" : ""}
       className={`button ${className}`}
     >

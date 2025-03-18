@@ -11,8 +11,8 @@ import "../components/projects/Projects.scss";
 
 export default function Page() {
   const [projectsData, setProjectsData] = useState<any>(projects);
-  const [offset, setOffset] = useState<number>(10);
-  const [startIndex, setStartIndex] = useState<number>(0);
+  const offset = 10;
+  const startIndex = 0;
   const [lastIndex, setLastIndex] = useState<number>(10);
   const [isLastPage, setIsLastPage] = useState<boolean>(false);
 

@@ -14,7 +14,7 @@ export default function Hero() {
         <div className="panels">
           <div className="panel left">
             <div>
-              <p>Hello I'm,</p>
+              <p>Hello I am,</p>
               <div className="legend">
                 <h1>Deeproshan Kumar</h1>
                 <p>

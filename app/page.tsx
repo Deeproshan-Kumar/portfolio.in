@@ -12,7 +12,7 @@ import "./globals.css";
 
 export default function Home() {
   useEffect(() => {
-    const locomotiveScroll = new LocomotiveScroll({
+     new LocomotiveScroll({
       lenisOptions: {
         wrapper: window,
         content: document.documentElement,

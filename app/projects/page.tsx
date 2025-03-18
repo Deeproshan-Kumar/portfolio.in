@@ -10,7 +10,7 @@ import { ProjectProps } from "../components/project/Project";
 import "../components/projects/Projects.scss";
 
 export default function Page() {
-  const [projectsData, setProjectsData] = useState<any>(projects);
+  const [projectsData] = useState<ProjectProps[]>(projects);
   const offset = 10;
   const startIndex = 0;
   const [lastIndex, setLastIndex] = useState<number>(10);

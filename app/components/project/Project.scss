@@ -1,6 +1,8 @@
 .project {
   width: 20%;
   padding: 1rem;
+  font-size: 1.5rem;
+  line-height: 1.6;
 
   .inner {
     position: relative;
@@ -17,6 +19,7 @@
       height: 16rem;
       width: 100%;
       padding: 1rem;
+      padding-bottom: 0;
       border-radius: 0.4rem;
       overflow: hidden;
 
@@ -45,7 +48,7 @@
       h4 {
         color: var(--white);
         font-size: 1.8rem;
-        font-weight: 500;
+        font-weight: 600;
         display: flex;
         align-items: flex-start;
         gap: 1rem;
@@ -78,8 +81,6 @@
       }
 
       p {
-        font-size: 1.5rem;
-        line-height: 1.6;
         margin-bottom: 2rem;
       }
     }
@@ -102,6 +103,23 @@
 @media only screen and (max-width: 767px) {
   .project {
     width: 50%;
+    font-size: 1.2rem;
+
+    .inner {
+      .project-body {
+        h4 {
+          font-size: 1.6rem;
+          
+          .status {
+            font-size: 1.2rem;
+          }
+        }
+
+        p {
+          margin-bottom: 1rem;
+        }
+      }
+    }
   }
 }
 

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Playwrite_IN } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import "./globals.css";
@@ -14,9 +14,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const playwriteIN = Playwrite_IN({
-  variable: "--font-playright-in",
-});
 
 export const metadata: Metadata = {
   title: "Portfolio | Deeproshan",
@@ -32,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${playwriteIN.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header />
         {children}

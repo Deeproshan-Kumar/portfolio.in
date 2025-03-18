@@ -4,158 +4,173 @@
   background-size: 100% 100%;
   overflow: hidden;
 
-  .panels {
-    height: calc(100vh - 8rem);
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+  .container {
+    position: relative;
 
-    .panel {
-      height: 100%;
-      width: 50%;
+    .text-lg {
+      font-size: 10vw;
+      text-transform: uppercase;
+      opacity: 25%;
+      position: absolute;
+      width: 100%;
+      white-space: nowrap;
+      pointer-events: none;
+    }
+
+    .first {
+      top: 0;
+      left: 5rem;
+    }
+
+    .second {
+      right: 5rem;
+      bottom: 0;
+      text-align: right;
+    }
+
+    .panels {
+      height: calc(100vh - 8rem);
+      width: 100%;
       display: flex;
       align-items: center;
-      font-size: 1.6rem;
-      color: var(--text);
+      flex-wrap: wrap;
 
-      &.left {
-        .legend {
-          position: relative;
-          margin: 2rem 0;
-          padding-left: 2rem;
+      .panel {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        color: var(--text);
 
-          &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 0.4rem;
-            border-radius: 0.4rem;
-            background: linear-gradient(
-              var(--primary),
-              var(--primary),
-              transparent
-            );
-          }
+        &.left {
+          .legend {
+            position: relative;
+            margin: 2rem 0;
+            padding-left: 2rem;
 
-          h1 {
-            font-size: 3.6rem;
-            font-family: "Playwrite In";
-            font-weight: 500;
-            line-height: 1.6;
-            color: var(--white);
-            margin-bottom: 1rem;
-          }
-
-          p {
-            font-size: 1.6rem;
-
-            .typed {
-              background: transparent;
-              padding: 0;
-              border: 0;
-              outline: 0;
-              font-size: 1.6rem;
-              font-weight: bold;
-            }
-          }
-        }
-      }
-
-      &.right {
-        position: relative;
-        justify-content: center;
-
-        .animation {
-          height: 100vh;
-          width: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-
-          .marquee {
-            height: 100%;
-            padding-left: 1rem;
-
-            .inner {
+            &::before {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
               height: 100%;
-              width: 100%;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              writing-mode: vertical-lr;
-              font-size: 3.6vw;
+              width: 0.4rem;
+              border-radius: 0.4rem;
+              background: linear-gradient(
+                var(--primary),
+                var(--primary),
+                transparent
+              );
+            }
+
+            h1 {
+              font-size: 4.2rem;
               font-weight: 700;
-              color: var(--text);
+              color: var(--white);
+              margin-bottom: 1rem;
+            }
+
+            p {
+              font-size: 1.6rem;
+              display: flex;
+              white-space: nowrap;
+
+              .typed {
+                background: transparent;
+                padding: 0;
+                border: 0;
+                outline: 0;
+                font-size: 1.6rem;
+                font-weight: bold;
+              }
             }
           }
         }
-      }
-    }
-  }
 
-  .rounded-button {
-    position: absolute;
-    bottom: 4rem;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 6rem;
-    width: 6rem;
-    background: var(--glass);
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-    color: var(--white);
-    font-size: 2rem;
-
-    &::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: 50%;
-      background: conic-gradient(
-        var(--primary),
-        var(--lime),
-        var(--pink),
-        var(--primary)
-      );
-      animation: rotate 5s linear infinite;
-
-      @keyframes rotate {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
+        &.right {
+          position: relative;
+          justify-content: center;
         }
       }
     }
 
-    &::after {
-      content: "";
+    .rounded-button {
       position: absolute;
-      inset: 0.2rem;
-      border-radius: 50%;
+      bottom: 4rem;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 6rem;
+      width: 6rem;
       background: var(--glass);
-    }
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: var(--white);
+      font-size: 2rem;
 
-    .icon {
-      position: relative;
-      z-index: 2;
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        background: conic-gradient(
+          var(--primary),
+          var(--lime),
+          var(--pink),
+          var(--primary)
+        );
+        animation: rotate 5s linear infinite;
+
+        @keyframes rotate {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0.2rem;
+        border-radius: 50%;
+        background: var(--glass);
+      }
+
+      .icon {
+        position: relative;
+        z-index: 2;
+      }
     }
   }
 }
 
 // Responsive
+@media only screen and (max-width: 1024px) {
+  .hero {
+    .container {
+      .first {
+        left: 3rem;
+      }
+
+      .second {
+        right: 3rem;
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 991px) {
   .hero {
-    .panels {
-      .panel {
-        &.left {
-          h1 {
-            font-size: 3.6rem;
+    .container {
+      .panels {
+        .panel {
+          &.left {
+            h1 {
+              font-size: 3.6rem;
+            }
           }
         }
       }
@@ -165,17 +180,26 @@
 
 @media only screen and (max-width: 767px) {
   .hero {
-    .panels {
-      height: calc(100vh - 7.5rem);
+    .container {
+      .first {
+        left: 2rem;
+      }
 
-      .panel {
-        height: 50vh;
-        width: 100%;
+      .second {
+        right: 2rem;
+      }
 
-        &.left {
-          .legend {
-            h1 {
-              font-size: 2.8rem;
+      .panels {
+        height: calc(100vh - 7.5rem);
+
+        .panel {
+          width: 100%;
+
+          &.left {
+            .legend {
+              h1 {
+                font-size: 2.8rem;
+              }
             }
           }
         }
@@ -186,12 +210,14 @@
 
 @media only screen and (max-width: 425px) {
   .hero {
-    .panels {
-      .panel {
-        &.left {
-          .legend {
-            h1 {
-              font-size: 2.4rem;
+    .container {
+      .panels {
+        .panel {
+          &.left {
+            .legend {
+              h1 {
+                font-size: 2.4rem;
+              }
             }
           }
         }

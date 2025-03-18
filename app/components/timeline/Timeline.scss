@@ -46,6 +46,7 @@
     z-index: 2;
 
     h3 {
+      font-size: 1.6rem;
       color: var(--white);
       margin-bottom: 0.6rem;
     }
@@ -71,6 +72,18 @@
     
     .inner {
       flex-direction: column;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+
+    p:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+
+    em {
+      font-size: 1.2rem;
     }
   }
 }

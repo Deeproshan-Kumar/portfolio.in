@@ -11,9 +11,10 @@ export default function Hero() {
   return (
     <section className="section hero" id="hero" aria-label="Hero Section">
       <div className="container">
+        <h1 className="text-lg first">Creative</h1>
         <div className="panels">
           <div className="panel left">
-            <div>
+            <div data-scroll data-scroll-speed="0.5">
               <p>Hello I am,</p>
               <div className="legend">
                 <h1>Deeproshan Kumar</h1>
@@ -45,28 +46,9 @@ export default function Hero() {
             </div>
           </div>
           <div className="panel right">
-            <div className="animation">
-              <div className="marquee" data-scroll data-scroll-speed="0.2">
-                <h2 className="inner">HTML</h2>
-              </div>
-              <div className="marquee" data-scroll data-scroll-speed="-0.2">
-                <h2 className="inner">CSS</h2>
-              </div>
-              <div className="marquee" data-scroll data-scroll-speed="0.5">
-                <h2 className="inner">JavaScript</h2>
-              </div>
-              <div className="marquee" data-scroll data-scroll-speed="-0.5">
-                <h2 className="inner">TypeScript</h2>
-              </div>
-              <div className="marquee" data-scroll data-scroll-speed="0.7">
-                <h2 className="inner">React</h2>
-              </div>
-              <div className="marquee" data-scroll data-scroll-speed="-0.7">
-                <h2 className="inner">Next</h2>
-              </div>
-            </div>
           </div>
         </div>
+        <h1 className="text-lg second">Developer</h1>
       </div>
       <Link href="#about" className="rounded-button">
         <FaCaretDown className="icon" />

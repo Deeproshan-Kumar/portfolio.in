@@ -16,18 +16,18 @@ export default function Home() {
       lenisOptions: {
         wrapper: window,
         content: document.documentElement,
-        lerp: 0.1,
+        lerp: 0.05,
       },
     });
   }, []);
   return (
-    <main id="main">
+    <>
       <Hero />
       <About />
       <Services />
       <Skills />
       <Projects />
       <Contact />
-    </main>
+    </>
   );
 }

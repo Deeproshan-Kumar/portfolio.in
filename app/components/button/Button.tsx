@@ -4,7 +4,9 @@ import "./Button.scss";
 
 interface ButtonProps {
   text?: string;
-  link?: string | { pathname: string; query?: { [key: string]: string | string[] } };
+  link?:
+    | string
+    | { pathname: string; query?: { [key: string]: string | string[] } };
   icon?: ReactNode;
   isExternal?: boolean;
   isButton: boolean;

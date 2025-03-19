@@ -76,7 +76,13 @@ export default function Header() {
               {navMenus.map((menu, index) => {
                 return (
                   <li key={menu?.id || index} className="nav-item">
-                    <Link href={menu?.link || "#"} className="nav-link">
+                    <Link
+                      href={menu?.link || "#"}
+                      className={
+                        pathname === menu?.link ? "nav-link active" : "nav-link"
+                      }
+                      onClick={handleMenuClose}
+                    >
                       <span className="icon menu-icon">{menu?.icon}</span>
                       <span className="menu-name">{menu.name}</span>
                     </Link>

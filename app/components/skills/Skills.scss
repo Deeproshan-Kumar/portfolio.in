@@ -4,3 +4,10 @@
   flex-wrap: wrap;
   margin: 0 -1rem;
 }
+
+// Responsive
+@media only screen and (max-width: 767px) {
+  .skills-wrapper {
+    margin: 0 -0.5rem;
+  }
+}

@@ -2,7 +2,31 @@
   position: relative;
   background: url("../../../public/pattern.svg");
   background-size: 100% 100%;
+  background-attachment: fixed;
   overflow: hidden;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+    filter: blur(15rem);
+    pointer-events: none;
+  }
+
+  &::before {
+    top: 0;
+    right: 0;
+    background: var(--pink);
+  }
+
+  &::after {
+    bottom: 0;
+    left: 0;
+    background: var(--blue);
+  }
 
   .container {
     position: relative;
@@ -93,57 +117,6 @@
         }
       }
     }
-
-    .rounded-button {
-      position: absolute;
-      bottom: 4rem;
-      left: 50%;
-      transform: translateX(-50%);
-      height: 6rem;
-      width: 6rem;
-      background: var(--glass);
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      color: var(--white);
-      font-size: 2rem;
-
-      &::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        border-radius: 50%;
-        background: conic-gradient(
-          var(--primary),
-          var(--lime),
-          var(--pink),
-          var(--primary)
-        );
-        animation: rotate 5s linear infinite;
-
-        @keyframes rotate {
-          0% {
-            transform: rotate(0deg);
-          }
-          100% {
-            transform: rotate(360deg);
-          }
-        }
-      }
-
-      &::after {
-        content: "";
-        position: absolute;
-        inset: 0.2rem;
-        border-radius: 50%;
-        background: var(--glass);
-      }
-
-      .icon {
-        position: relative;
-        z-index: 2;
-      }
-    }
   }
 }
 
@@ -164,6 +137,13 @@
 
 @media only screen and (max-width: 991px) {
   .hero {
+    &::before,
+    &::after {
+      height: 15rem;
+      width: 15rem;
+      filter: blur(10rem);
+    }
+
     .container {
       .panels {
         .panel {
@@ -180,6 +160,13 @@
 
 @media only screen and (max-width: 767px) {
   .hero {
+    &::before,
+    &::after {
+      height: 10rem;
+      width: 10rem;
+      filter: blur(8rem);
+    }
+
     .container {
       .first {
         left: 2rem;

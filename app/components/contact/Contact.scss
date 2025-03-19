@@ -8,87 +8,162 @@
     width: 50%;
 
     &.panel-left {
-      border-radius: 0.4rem;
+      position: relative;
+
+      &.panel-left::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: var(--primary);
+        opacity: 50%;
+      }
+
+      .image {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 0.4rem;
+        vertical-align: middle;
+      }
+
+      .model {
+        height: 100%;
+        width: 30rem;
+        object-fit: cover;
+        mix-blend-mode: color-burn;
+      }
     }
 
     &.panel-right {
-      padding: 0 2rem;
+      background: var(--glass);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 3rem;
 
-      .fields {
-        display: flex;
-        flex-wrap: nowrap;
+      form {
+        width: 100%;
 
-        .w-50 {
-          width: 50%;
-          padding: 1rem;
-        }
+        .fields {
+          display: flex;
+          flex-wrap: nowrap;
+          margin: 0 -1rem;
 
-        .field {
-          position: relative;
-          width: 100%;
-          margin-bottom: 2rem;
+          .w-50 {
+            width: 50%;
+            padding: 1rem;
+          }
 
-          input,
-          textarea {
-            background: transparent;
-            height: 6rem;
+          .field {
+            position: relative;
             width: 100%;
-            padding-top: 1.4rem;
-            border: 0;
-            outline: 0;
+            margin-bottom: 2rem;
+
+            input,
+            textarea {
+              background: transparent;
+              height: 6rem;
+              width: 100%;
+              padding-top: 1.4rem;
+              border: 0;
+              outline: 0;
+              color: var(--white);
+              font-size: 1.5rem;
+              font-family: var(--font-geist-sans), sans-serif;
+              border-bottom: 0.1rem solid var(--text);
+            }
+
+            textarea {
+              resize: vertical;
+              height: 100%;
+            }
+
+            label {
+              position: absolute;
+              top: 2rem;
+              left: 0;
+              font-size: 1.5rem;
+              font-weight: 500;
+              pointer-events: none;
+              transition: 300ms all ease-in-out;
+            }
+
+            input:focus + label,
+            textarea:focus + label,
+            input:valid + label,
+            textarea:valid + label {
+              top: 0;
+              color: var(--primary);
+            }
+
+            .animation {
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              transform: scaleX(0);
+              transform-origin: left;
+              border-bottom: 0.1rem solid var(--primary);
+              transition: 300ms all ease-in-out;
+            }
+
+            input:focus ~ .animation,
+            textarea:focus ~ .animation {
+              transform: scaleX(100%);
+            }
+
+            input::placeholder,
+            textarea::placeholder {
+              font-size: 1.5rem;
+              font-weight: 500;
+              font-family: var(--font-geist-sans), sans-serif;
+            }
+          }
+
+          &.action {
+            gap: 1rem;
+            align-items: center;
+          }
+
+          .spinner {
+            display: block;
+            height: 2.4rem;
+            width: 2.4rem;
+            border-radius: 50%;
+            border: 0.2rem solid var(--primary);
+            border-top: 0.2rem solid transparent;
+            animation: spin 1s linear infinite;
+          }
+
+          @keyframes spin {
+            from {
+              transform: rotate(0deg);
+            }
+            to {
+              transform: rotate(360deg);
+            }
+          }
+
+          .msg {
+            width: 100%;
+            border-radius: 0.4rem;
             color: var(--white);
-            font-size: 1.5rem;
-            font-family: var(--font-geist-sans), sans-serif;
-            border-bottom: 0.1rem solid var(--text);
+            padding: 1rem;
           }
 
-          textarea {
-            resize: vertical;
+          .msg.error {
+            border: 0.1rem solid var(--red);
           }
 
-          label {
-            position: absolute;
-            top: 2rem;
-            left: 0;
-            font-size: 1.5rem;
-            font-weight: 500;
-            pointer-events: none;
-            transition: 300ms all ease-in-out;
-          }
-
-          input:focus + label,
-          textarea:focus + label,
-          input:valid + label,
-          textarea:valid + label {
-            top: 0;
-            color: var(--primary);
-          }
-
-          .animation {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            transform: scaleX(0);
-            transform-origin: left;
-            border-bottom: 0.1rem solid var(--primary);
-            transition: 300ms all ease-in-out;
-          }
-
-          input:focus ~ .animation,
-          textarea:focus ~ .animation {
-            transform: scaleX(100%);
-          }
-
-          input::placeholder,
-          textarea::placeholder {
-            font-size: 1.5rem;
-            font-weight: 500;
-            font-family: var(--font-geist-sans), sans-serif;
+          .msg.success {
+            border: 0.1rem solid var(--lime);
           }
         }
 
-        &.w-full {
+        .w-full {
           padding: 1rem;
         }
       }
@@ -190,12 +265,14 @@
       width: 100%;
 
       &.panel-right {
-        padding: 0;
+        padding: 2rem;
       }
     }
   }
 
   .contact-details-wrapper {
+    margin: 0 -0.5rem;
+
     .panel {
       width: 50%;
       padding: 0.5rem;

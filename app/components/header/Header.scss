@@ -114,19 +114,29 @@
   .menu-toggler {
     @include menu-toggler;
     position: absolute;
-    top: 2rem;
+    top: 1rem;
     right: 2rem;
+
+    span {
+      width: 100%;
+    }
   }
 
   .mobile-navbar {
     .menus .nav-item {
       margin-bottom: 2rem;
 
-      a {
+      .nav-link {
         font-size: 1.5rem;
         color: var(--text);
         display: flex;
         gap: 0.5rem;
+        transition: 300ms all ease-in-out;
+
+        &:hover,
+        &.active {
+          color: var(--white);
+        }
       }
     }
   }

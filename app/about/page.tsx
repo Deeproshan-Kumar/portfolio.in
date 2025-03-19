@@ -2,7 +2,7 @@ import About from "../components/about/About";
 
 export default function page() {
   return (
-    <>
+    <main className="main">
       <section className="section banner" aria-label="Banner">
         <div className="container">
           <h1>About Me</h1>
@@ -10,6 +10,6 @@ export default function page() {
         </div>
       </section>
       <About />
-    </>
+    </main>
   );
 }

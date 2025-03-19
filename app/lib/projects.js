@@ -1,4 +1,5 @@
 import TTGAsiaThumbnail from "../../public/projects/ttg-asia.png";
+import ShadientThumbnail from "../../public/projects/shadient.co.png";
 import ScorpioClassicThumbnail from "../../public/projects/scorpio-classic.png";
 import DropHeatThumbnail from "../../public/projects/dropheat.png";
 import VentrickleThumbnail from "../../public/projects/ventrickle.png";
@@ -35,6 +36,16 @@ export const projects = [
   },
   {
     id: 2,
+    thumbnail: ShadientThumbnail,
+    name: "Shadient.co",
+    tags: ["HTML, CSS, JavaScript, GSAP, Locomotive.js"],
+    description:
+      "Shadient.co is a interactive and animated website made with GSAP.",
+    isLive: false,
+    projectUrl: "https://deeproshan-kumar.github.io/shadient.co/",
+  },
+  {
+    id: 3,
     thumbnail: ScorpioClassicThumbnail,
     name: "Scorpio Classic Landing Page",
     tags: ["HTML, CSS, JavaScript"],
@@ -44,7 +55,7 @@ export const projects = [
     projectUrl: "https://deeproshan-kumar.github.io/scorpio-classic/",
   },
   {
-    id: 3,
+    id: 4,
     thumbnail: DropHeatThumbnail,
     name: "DropHeat",
     tags: ["HTML, CSS, JavaScript"],
@@ -54,7 +65,7 @@ export const projects = [
     projectUrl: "https://deeproshan-kumar.github.io/dropheat/",
   },
   {
-    id: 4,
+    id: 5,
     thumbnail: VentrickleThumbnail,
     name: "Ventrickle",
     tags: ["HTML, CSS, JavaScript, jQuery, WordPress, Elementor"],
@@ -64,7 +75,7 @@ export const projects = [
     projectUrl: "https://ventrickle.com/",
   },
   {
-    id: 5,
+    id: 6,
     thumbnail: WSH360Thumbnail,
     name: "WSH360Solutions",
     tags: ["HTML, CSS, JavaScript, jQuery, WordPress, Elementor"],
@@ -74,7 +85,7 @@ export const projects = [
     projectUrl: "https://wsh360solutions.com/",
   },
   {
-    id: 6,
+    id: 7,
     thumbnail: DucuaraThumbnail,
     name: "Ducara",
     tags: ["HTML, CSS, JavaScript, jQuery, WordPress, Elementor"],
@@ -84,7 +95,7 @@ export const projects = [
     projectUrl: "https://ducarainfo.com//",
   },
   {
-    id: 7,
+    id: 8,
     thumbnail: ZoomSpeedThumbnail,
     name: "ZoomSpeed",
     tags: ["HTML, CSS, JavaScript, jQuery, WordPress, Elementor"],
@@ -94,7 +105,7 @@ export const projects = [
     projectUrl: "https://www.zoomspeed.in/",
   },
   {
-    id: 8,
+    id: 9,
     thumbnail: SeatriumThumbnail,
     name: "Seatrium",
     tags: ["HTML, CSS, JavaScript, jQuery, AOS"],
@@ -104,7 +115,7 @@ export const projects = [
     projectUrl: "https://seatrium.com/",
   },
   {
-    id: 9,
+    id: 10,
     thumbnail: SiftThumbnail,
     name: "SIFT Analytics",
     tags: ["HTML, CSS, JavaScript, jQuery, WordPress, Elementor"],
@@ -114,7 +125,7 @@ export const projects = [
     projectUrl: "https://sift-ag.com/",
   },
   {
-    id: 10,
+    id: 11,
     thumbnail: WResidenceThumbnail,
     name: "W Residence Marina View",
     tags: ["HTML, CSS, JavaScript, jQuery, GSAP"],
@@ -124,7 +135,7 @@ export const projects = [
     projectUrl: "https://www.wresidencesmarinaview.com.sg/",
   },
   {
-    id: 11,
+    id: 12,
     thumbnail: ArikiThumbnail,
     name: "Ariki",
     tags: ["HTML, CSS, JavaScript, jQuery"],
@@ -134,7 +145,7 @@ export const projects = [
     projectUrl: "https://www.ariki.com.sg/",
   },
   {
-    id: 12,
+    id: 13,
     thumbnail: EnviroThumbnail,
     name: "Enviro",
     tags: ["HTML, CSS, JavaScript, jQuery, WordPress, Elementor"],
@@ -144,7 +155,7 @@ export const projects = [
     projectUrl: "https://www.enviroplant.com.sg/",
   },
   {
-    id: 13,
+    id: 14,
     thumbnail: PIER71Thumbnail,
     name: "PIER71",
     tags: ["HTML, CSS, JavaScript, jQuery, WordPress, Elementor"],
@@ -154,7 +165,7 @@ export const projects = [
     projectUrl: "https://pier71.sg/",
   },
   {
-    id: 14,
+    id: 15,
     thumbnail: BrainGameThumbnail,
     name: "Brain Game",
     tags: ["HTML, CSS, JavaScript"],
@@ -164,7 +175,7 @@ export const projects = [
     projectUrl: "https://deeproshan-kumar.github.io/brain-game/",
   },
   {
-    id: 15,
+    id: 16,
     thumbnail: TicTacToeThumbnail,
     name: "Tic Tac Toe Game",
     tags: ["HTML, CSS, JavaScript"],
@@ -174,7 +185,7 @@ export const projects = [
     projectUrl: "https://deeproshan-kumar.github.io/tic-tac-toe/",
   },
   {
-    id: 16,
+    id: 17,
     thumbnail: RockPaperScissorThumbnail,
     name: "Rock Paper Scissor Game",
     tags: ["HTML, CSS, JavaScript"],
@@ -184,7 +195,7 @@ export const projects = [
     projectUrl: "https://deeproshan-kumar.github.io/rock-paper-scissor/",
   },
   {
-    id: 17,
+    id: 18,
     thumbnail: ManchestereicrThumbnail,
     name: "Manchestereicr",
     tags: ["HTML, CSS, JavaScript, jQuery, WordPress, Elementor"],
@@ -194,7 +205,7 @@ export const projects = [
     projectUrl: "https://manchestereicr.com/",
   },
   {
-    id: 18,
+    id: 19,
     thumbnail: GillCapitalThumbnail,
     name: "Gill Capital",
     tags: ["HTML, CSS, JavaScript, jQuery, WordPress, Elementor"],
@@ -203,7 +214,7 @@ export const projects = [
     projectUrl: "https://www.gillcapital.com.sg/",
   },
   {
-    id: 19,
+    id: 20,
     thumbnail: SembcorpThumbnail,
     name: "Sembcorp Energy",
     tags: ["HTML, CSS, JavaScript, jQuery, WordPress, Elementor"],
@@ -212,7 +223,7 @@ export const projects = [
     projectUrl: "https://www.sembcorpenergy.com.sg/",
   },
   {
-    id: 20,
+    id: 21,
     thumbnail: SoftbankThumbnail,
     name: "Softbank Robotics",
     tags: ["HTML, CSS, JavaScript, jQuery, WordPress, Elementor"],
@@ -222,7 +233,7 @@ export const projects = [
     projectUrl: "https://apac.softbankrobotics.com/apac/",
   },
   {
-    id: 21,
+    id: 22,
     thumbnail: GkumarThumbnail,
     name: "Gkumar",
     tags: ["HTML, CSS, JavaScript, jQuery, WordPress, Elementor"],
@@ -232,7 +243,7 @@ export const projects = [
     projectUrl: "https://gkumar.in/",
   },
   {
-    id: 22,
+    id: 23,
     thumbnail: AstaliftThumbnail,
     name: "Astalift",
     tags: ["HTML, CSS, JavaScript, jQuery, WordPress, Elementor"],
@@ -242,7 +253,7 @@ export const projects = [
     projectUrl: "https://astalift.com.sg/",
   },
   {
-    id: 23,
+    id: 24,
     thumbnail: VaseeyatnamaThumbnail,
     name: "Vaseeyatnama",
     tags: ["HTML, CSS, JavaScript, jQuery, WordPress, Elementor"],

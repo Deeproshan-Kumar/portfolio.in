@@ -265,7 +265,13 @@
       width: 100%;
 
       &.panel-right {
-        padding: 2rem;
+        padding: 1.5rem;
+      }
+
+      .fields {
+        .field {
+          margin-bottom: 0;
+        }
       }
     }
   }
@@ -280,11 +286,13 @@
       article {
         .group {
           h2 {
-            font-size: 2rem;
+            font-size: 1.8rem;
           }
 
           .icon-box {
             .icon {
+              height: 3.2rem;
+              width: 3.2rem;
               font-size: 1.4rem;
             }
           }
@@ -298,6 +306,11 @@
   .contact-details-wrapper {
     .panel {
       width: 100%;
+
+      article {
+        min-height: unset;
+        padding: 1.5rem;
+      }
     }
   }
 }

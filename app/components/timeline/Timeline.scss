@@ -51,13 +51,15 @@
       margin-bottom: 0.6rem;
     }
 
-    p:not(:last-child) {
-      margin-bottom: 1rem;
+    p {
+      em {
+        font-size: 1.4rem;
+        white-space: nowrap;
+      }
     }
 
-    em {
-      font-size: 1.4rem;
-      white-space: nowrap;
+    p:not(:last-child) {
+      margin-bottom: 1rem;
     }
   }
 }
@@ -71,19 +73,12 @@
     }
     
     .inner {
+      padding: 1.5rem;
       flex-direction: column;
-    }
-
-    p {
-      font-size: 1.2rem;
     }
 
     p:not(:last-child) {
       margin-bottom: 0.5rem;
-    }
-
-    em {
-      font-size: 1.2rem;
     }
   }
 }

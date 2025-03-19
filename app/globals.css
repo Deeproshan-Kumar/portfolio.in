@@ -218,6 +218,7 @@ ul {
 @media only screen and (max-width: 767px) {
   body {
     padding-top: 6rem;
+    font-size: 1.4rem;
   }
 
   .banner {

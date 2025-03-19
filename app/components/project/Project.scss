@@ -1,7 +1,6 @@
 .project {
   width: 20%;
   padding: 1rem;
-  font-size: 1.5rem;
   line-height: 1.6;
 
   .inner {
@@ -18,7 +17,7 @@
     .project-header {
       height: 16rem;
       width: 100%;
-      padding: 1rem;
+      padding: 2rem;
       padding-bottom: 0;
       border-radius: 0.4rem;
       overflow: hidden;
@@ -72,7 +71,12 @@
       }
 
       .tags {
-        background: linear-gradient(to left, var(--pink), var(--lime), var(--blue));
+        background: linear-gradient(
+          to left,
+          var(--pink),
+          var(--lime),
+          var(--blue)
+        );
         background-size: 100% 100%;
         background-clip: text;
         -webkit-background-clip: text;
@@ -103,13 +107,19 @@
 @media only screen and (max-width: 767px) {
   .project {
     width: 50%;
-    font-size: 1.2rem;
 
     .inner {
+      .project-header {
+        padding: 1.5rem;
+        padding-bottom: 0;
+      }
+
       .project-body {
+        padding: 1.5rem;
+
         h4 {
           font-size: 1.6rem;
-          
+
           .status {
             font-size: 1.2rem;
           }

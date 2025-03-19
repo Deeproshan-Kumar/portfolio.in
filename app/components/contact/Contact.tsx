@@ -19,7 +19,7 @@ interface FormData {
 }
 
 export default function Contact() {
-  const [isPending, setIsPending] = useState<Boolean>(false);
+  const [isPending, setIsPending] = useState<boolean>(false);
   const [isError, setIsError] = useState<string>("");
   const [isSuccess, setIsSuccess] = useState<string>("");
   const [formData, setFormData] = useState<FormData>({
